@@ -19,7 +19,7 @@
 }
 
 .paragraph-style {
-  @apply font-normal text-sm leading-[28px] tracking-[0px] md:text-[16px] md:w-[508px];
+  @apply font-normal text-sm leading-[28px] tracking-[0px] md:text-[16px];
 }
 
 body {

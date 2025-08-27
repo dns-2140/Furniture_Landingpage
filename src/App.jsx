@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./output.css";
 import Features from "./components/Features";
+import NewInStore from "./components/NewInStore";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -120,6 +121,7 @@ function App() {
         </section>
 
         <Features />
+        <NewInStore />
       </div>
     </>
   );

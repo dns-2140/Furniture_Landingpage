@@ -19,7 +19,7 @@ const Features = () => {
 
               <div className="feature-text mt-[-4px]">
                 <h4 className="subheader-style">Valuation Services</h4>
-                <p className="paragraph-style">
+                <p className="paragraph-style md:w-[508px]">
                   Sometimes features require a short description. This can be
                   detailed description
                 </p>
@@ -33,7 +33,7 @@ const Features = () => {
                 <h4 className="subheader-style">
                   Development of Furniture Models
                 </h4>
-                <p className="paragraph-style">
+                <p className="paragraph-style md:w-[508px]">
                   Sometimes features require a short description. This can be
                   detailed description
                 </p>
