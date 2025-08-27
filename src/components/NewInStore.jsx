@@ -9,7 +9,7 @@ const NewInStore = () => {
     { id: 4, image_src: "/Chair.png", text: "Chair" },
   ]);
   return (
-    <div className="mb-12 md:px-[100px]">
+    <div className="mb-24 md:px-[100px]">
       <div className="flex flex-col px-6 md:px-0 md:flex-row md:items-center">
         <div className="text-container flex md:flex-col md:justify-start md:items-start md:max-w-[240px] md:mr-[72px] gap-5 justify-between items-center mb-6">
           <h3 className="header-style">New In The Store</h3>

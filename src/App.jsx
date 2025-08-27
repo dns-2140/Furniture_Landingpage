@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./output.css";
 import Features from "./components/Features";
 import NewInStore from "./components/NewInStore";
+import Best from "./components/Best";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -122,6 +123,7 @@ function App() {
 
         <Features />
         <NewInStore />
+        <Best />
       </div>
     </>
   );
