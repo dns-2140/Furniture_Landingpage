@@ -81,27 +81,36 @@ function App() {
               <button className="cta-button px-12 py-2">Shop now</button>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 bg-[#286f6c] text-white w-full rounded-lg py-10 px-12 md:px-16 md:py-4 gap-y-16 md:gap-y-0 md:mt-0 mt-40">
-              <div className="banner-grid">
-                <span className="figure">7 </span>
+            <div className="stats-banner grid grid-cols-2 md:grid-cols-4 bg-[#286f6c] text-white w-full rounded-lg py-10  md:py-4 gap-y-16 md:gap-y-0 md:mt-0 mt-40">
+              <div className="banner-grid ">
+                <span className="figure  font-semibold text-[24px] leading-[1.2] tracking-normal text-center capitalize">
+                  7{" "}
+                </span>
+
                 <span>Year</span>
                 <span>Experience</span>
               </div>
 
               <div className="banner-grid">
-                <span className="figure">2</span>
+                <span className="figure font-semibold text-[24px] leading-[1.2] tracking-normal text-center capitalize">
+                  2
+                </span>
                 <span>Opened in </span>
                 <span>the country</span>
               </div>
 
               <div className="banner-grid">
-                <span className="figure">2</span>
-                <span>Opened in </span>
-                <span>the country</span>
+                <span className="figure font-semibold text-[24px] leading-[1.2] tracking-normal text-center capitalize">
+                  10k
+                </span>
+                <span>Furniture </span>
+                <span>Sold</span>
               </div>
 
               <div className="banner-grid">
-                <span className="figure">260+</span>
+                <span className="figure  font-semibold text-[24px] leading-[1.2] tracking-normal text-center capitalize">
+                  260+
+                </span>
                 <span>Variant </span>
                 <span>Furnitue</span>
               </div>

@@ -5,6 +5,10 @@
   --font-inter: "Inter", sans-serif;
 }
 
+body {
+  font-family: var(--font-saira);
+}
+
 #hero {
   background-image: url("/desktop/image-hero.jpg");
   background-repeat: no-repeat;
@@ -40,6 +44,14 @@ li {
   flex-direction: column;
   align-items: center;
   border-right: 1px solid white;
+}
+
+.banner-grid > :not(:first-child) {
+  font-size: 14px; /* Font size */
+  line-height: 130%; /* Line height */
+  letter-spacing: 1%; /* Letter spacing */
+  text-align: center; /* Center text */
+  text-transform: none;
 }
 
 .banner-grid:last-child {
