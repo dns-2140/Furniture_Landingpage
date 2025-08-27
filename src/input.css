@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import 'tailwindcss';
+@theme {
+  --font-saira: 'Saira', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+#hero {
+  background-image: url('/desktop/image-hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 850px;
+}
+
+@media (max-width: 576px) {
+  #hero {
+    background-image: url('/mobile/image-hero-mobile.png');
+    background-size: cover;
+  }
+}
+
+li {
+  list-style: none;
+  width: 64px;
+  text-align: center;
+}
+
+.desktop-menu a:hover {
+  font-weight: 500;
+}
+
+.banner-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .divider {
+  border-right: 1px solid white;
+} */
+
+.banner-grid .figure {
+  font-size: 40px;
+}
