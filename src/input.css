@@ -3,10 +3,28 @@
 @theme {
   --font-saira: "Saira", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --color-primary-text: rgba(35, 38, 47, 1);
+}
+
+.header-style {
+  @apply font-semibold text-2xl leading-[130%] tracking-[0px] capitalize md:text-[40px];
+}
+
+.text-style {
+  @apply font-normal text-sm leading-[170%] tracking-[0px] md:text-[20px];
+}
+
+.subheader-style {
+  @apply font-semibold text-base leading-[28px] tracking-[0px] md:text-[20px];
+}
+
+.paragraph-style {
+  @apply font-normal text-sm leading-[28px] tracking-[0px] md:text-[16px] md:w-[508px];
 }
 
 body {
   font-family: var(--font-saira);
+  color: var(--color-primary-text);
 }
 
 #hero {
