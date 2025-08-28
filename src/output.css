@@ -9,6 +9,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-amber-400: oklch(82.8% 0.189 84.429);
     --color-pink-500: oklch(65.6% 0.241 354.308);
     --color-gray-100: oklch(96.7% 0.003 264.542);
     --color-gray-200: oklch(92.8% 0.006 264.531);
@@ -554,6 +555,9 @@
   .bg-\[\#474751\] {
     background-color: #474751;
   }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
@@ -828,6 +832,26 @@
       margin-top: calc(var(--spacing) * 0);
     }
   }
+  .md\:mt-24 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:mt-28 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 28);
+    }
+  }
+  .md\:mt-30 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 30);
+    }
+  }
+  .md\:mt-40 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--spacing) * 40);
+    }
+  }
   .md\:mr-\[72px\] {
     @media (width >= 48rem) {
       margin-right: 72px;
@@ -858,6 +882,11 @@
       display: none;
     }
   }
+  .md\:h-\[292px\] {
+    @media (width >= 48rem) {
+      height: 292px;
+    }
+  }
   .md\:h-\[490px\] {
     @media (width >= 48rem) {
       height: 490px;
@@ -873,6 +902,11 @@
       height: 1000px;
     }
   }
+  .md\:max-h-\[292px\] {
+    @media (width >= 48rem) {
+      max-height: 292px;
+    }
+  }
   .md\:max-h-\[340px\] {
     @media (width >= 48rem) {
       max-height: 340px;
@@ -886,6 +920,11 @@
   .md\:max-h-\[400px\] {
     @media (width >= 48rem) {
       max-height: 400px;
+    }
+  }
+  .md\:w-\[290px\] {
+    @media (width >= 48rem) {
+      width: 290px;
     }
   }
   .md\:w-\[508px\] {
@@ -911,6 +950,11 @@
   .md\:max-w-\[265px\] {
     @media (width >= 48rem) {
       max-width: 265px;
+    }
+  }
+  .md\:max-w-\[290px\] {
+    @media (width >= 48rem) {
+      max-width: 290px;
     }
   }
   .md\:max-w-\[349px\] {
@@ -1046,6 +1090,11 @@
   .md\:pl-\[760px\] {
     @media (width >= 48rem) {
       padding-left: 760px;
+    }
+  }
+  .md\:text-center {
+    @media (width >= 48rem) {
+      text-align: center;
     }
   }
   .md\:text-left {

@@ -15,8 +15,11 @@ const ProductList = ({ products, pagination, currPage }) => (
 
     <div className="flex flex-wrap gap-5 gap-y-20">
       {products.map((product) => (
-        <div key={product.id} className="max-w-[160px] max-h-[170px]">
-          <div className="image-container border border-gray-200 w-[160px] h-[160px] mb-2.5">
+        <div
+          key={product.id}
+          className="max-w-[160px] max-h-[170px] md:max-w-[290px] md:max-h-[292px]"
+        >
+          <div className="image-container border border-gray-200 w-[160px] h-[160px] mb-2.5 md:w-[290px] md:h-[292px]">
             <img
               src={product.image}
               alt={product.title}
@@ -40,7 +43,7 @@ const ProductList = ({ products, pagination, currPage }) => (
       ))}
     </div>
 
-    <div className="button-container flex mt-20 gap-5 justify-start items-center">
+    <div className="button-container flex mt-20 md:mt-28 gap-5 justify-start items-center md:justify-center">
       <button
         disabled={currPage === 1}
         onClick={() => pagination("previous")}
@@ -54,7 +57,7 @@ const ProductList = ({ products, pagination, currPage }) => (
       >
         <ArrowLeft className="w-4 h-4" />
       </button>
-      <div
+      <button
         disabled={currPage === 3}
         onClick={() => pagination("next")}
         className={`w-[32px] h-[32px] rounded-full flex items-center justify-center 
@@ -67,7 +70,7 @@ const ProductList = ({ products, pagination, currPage }) => (
         `}
       >
         <ArrowRight className="w-4 h-4" />
-      </div>
+      </button>
     </div>
   </div>
 );
