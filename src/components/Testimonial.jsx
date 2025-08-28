@@ -3,7 +3,7 @@ import { ArrowRight, ArrowLeft } from "lucide-react";
 
 const Testimonial = () => {
   return (
-    <div className="px-6 mb-12 md:px-[100px] md:py-16">
+    <div className="px-6 mb-12 md:px-[100px] md:py-16 mt-12">
       <div className="flex flex-col gap-8 md:flex-row md:items-center">
         <div className="text-container-testimonials flex flex-col gap-8 md:w-[635px]">
           <h3 className="header-style">What People Are Saying About Us</h3>

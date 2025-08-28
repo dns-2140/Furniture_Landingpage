@@ -36,18 +36,6 @@ body {
   height: 850px;
 }
 
-@media (max-width: 576px) {
-  #hero {
-    background-image: url("/mobile/image-hero-mobile.png");
-    background-size: cover;
-  }
-
-  .banner-grid:nth-child(2),
-  .banner-grid:nth-child(4) {
-    border-right: none;
-  }
-}
-
 li {
   list-style: none;
   width: 64px;
@@ -134,4 +122,24 @@ li {
 .cta-button {
   backdrop-filter: blur(10px);
   background: rgba(226, 226, 226, 0.144);
+}
+
+.form {
+  background-image: url("/Fbgdesktop.png");
+}
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("/mobile/image-hero-mobile.png");
+    background-size: cover;
+  }
+
+  .banner-grid:nth-child(2),
+  .banner-grid:nth-child(4) {
+    border-right: none;
+  }
+
+  .form {
+    background-image: url("/fbgmobile.png");
+    background-size: cover;
+  }
 }
