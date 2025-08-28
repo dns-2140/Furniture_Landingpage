@@ -50,7 +50,11 @@ const Testimonial = () => {
             <div className="user-image">
               <img
                 className="w-10 h-10 rounded-full"
-                src={testimonials.length > 0 && testimonials[currIndex].image}
+                src={
+                  testimonials.length > 0
+                    ? testimonials[currIndex].image
+                    : undefined
+                }
                 alt=""
               />
             </div>
@@ -65,12 +69,28 @@ const Testimonial = () => {
           </div>
           <p>{testimonials.length > 0 && testimonials[currIndex].message}</p>
           <div className="button-container md:flex mt-6 gap-5 justify-start hidden">
-            <div className="w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)]">
+            <button
+              disabled={currIndex === 0}
+              onClick={() => handlePagination("previous")}
+              className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] ${
+                currIndex === 0
+                  ? "opacity-50 cursor-not-allowed shadow-none"
+                  : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+              }`}
+            >
               <ArrowLeft />
-            </div>
-            <div className="w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white">
+            </button>
+            <button
+              disabled={currIndex === testimonials.length - 1}
+              onClick={() => handlePagination("next")}
+              className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white ${
+                currIndex === testimonials.length - 1
+                  ? "opacity-50 cursor-not-allowed shadow-none"
+                  : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+              }`}
+            >
               <ArrowRight />
-            </div>
+            </button>
           </div>
         </div>
         <div className="image-container-best max-w-[340px] max-h-[205px] md:max-w-[562px] md:max-h-[340px] w-full h-full">
@@ -80,12 +100,28 @@ const Testimonial = () => {
             className="object-contain w-full h-full"
           />
           <div className="button-container flex mt-6 gap-5 justify-center md:hidden">
-            <div className="w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)]">
-              <ArrowLeft onClick={() => handlePagination("previous")} />
-            </div>
-            <div className="w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white">
-              <ArrowRight onClick={() => handlePagination("next")} />
-            </div>
+            <button
+              disabled={currIndex === 0}
+              className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)]  ${
+                currIndex === 0
+                  ? "opacity-50 cursor-not-allowed shadow-none"
+                  : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+              }`}
+              onClick={() => handlePagination("previous")}
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              disabled={currIndex === testimonials.length - 1}
+              className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white ${
+                currIndex === testimonials.length - 1
+                  ? "opacity-50 cursor-not-allowed shadow-none"
+                  : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+              }`}
+              onClick={() => handlePagination("next")}
+            >
+              <ArrowRight />
+            </button>
           </div>
         </div>
       </div>
