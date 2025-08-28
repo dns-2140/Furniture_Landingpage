@@ -5,7 +5,7 @@ function truncateText(text, maxLength) {
   return text.length > maxLength ? text.slice(0, maxLength) + ".." : text;
 }
 
-const ProductList = ({ products }) => (
+const ProductList = ({ products, pagination, currPage }) => (
   <div className="my-24">
     <h3 className="header-style text-center mb-8">All Products</h3>
     <p className="text-style mb-12">
@@ -16,10 +16,10 @@ const ProductList = ({ products }) => (
     <div className="flex flex-wrap gap-5 gap-y-20">
       {products.map((product) => (
         <div key={product.id} className="max-w-[160px] max-h-[170px]">
-          <div className="image-container border border-gray-200 w-full h-full mb-2.5">
+          <div className="image-container border border-gray-200 w-[160px] h-[160px] mb-2.5">
             <img
               src={product.image}
-              alt=""
+              alt={product.title}
               className="w-full h-full object-cover"
             />
           </div>
@@ -41,17 +41,30 @@ const ProductList = ({ products }) => (
     </div>
 
     <div className="button-container flex mt-20 gap-5 justify-start items-center">
-      <div
-        className="w-[32px] h-[32px] rounded-full flex items-center justify-center 
+      <button
+        disabled={currPage === 1}
+        onClick={() => pagination("previous")}
+        className={`w-[32px] h-[32px] rounded-full flex items-center justify-center 
     bg-white shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] 
-    hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+    hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)] transition-shadow duration-300 ${
+      currPage === 1
+        ? "opacity-50 cursor-not-allowed shadow-none"
+        : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+    }`}
       >
         <ArrowLeft className="w-4 h-4" />
-      </div>
+      </button>
       <div
-        className="w-[32px] h-[32px] rounded-full flex items-center justify-center 
+        disabled={currPage === 3}
+        onClick={() => pagination("next")}
+        className={`w-[32px] h-[32px] rounded-full flex items-center justify-center 
     bg-white shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] 
-    hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)] transition-shadow duration-300"
+    hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)] transition-shadow duration-300 ${
+      currPage === 3
+        ? "opacity-50 cursor-not-allowed shadow-none"
+        : "shadow-[0_4px_6px_rgba(0,0,0,0.1),0_2px_4px_rgba(0,0,0,0.06)] hover:shadow-[0_6px_12px_rgba(0,0,0,0.15)]"
+    }
+        `}
       >
         <ArrowRight className="w-4 h-4" />
       </div>
