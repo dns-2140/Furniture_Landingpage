@@ -11,7 +11,7 @@ const Footer = () => {
           FurniShop
         </h3>
 
-        <div class="social-icons flex space-x-4 md:justify-center md:items-center">
+        <div className="social-icons flex space-x-4 md:justify-center md:items-center">
           <a
             href="#"
             className="bg-[#474751] p-4 rounded-full hover:bg-gray-600 transition"
@@ -39,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div class="border-t border-gray-700 my-6 hidden md:block mb-12"></div>
+      <div className="border-t border-gray-700 my-6 hidden md:block mb-12"></div>
 
       <div className="flex flex-col md:flex-row md:justify-center items-start gap-16 md:items-start">
         <div className="group-1">
@@ -47,10 +47,10 @@ const Footer = () => {
           <div className="flex gap-20">
             {/*Our Products*/}
             <div className="flex flex-col ">
-              <h3 class="font-raleway text-white font-semibold mb-6">
+              <h3 className="font-raleway text-white font-semibold mb-6">
                 Our Products
               </h3>
-              <ul class="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
+              <ul className="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
                 <li>
                   <a href="#" className="hover:text-white">
                     The Support Suite
@@ -75,10 +75,10 @@ const Footer = () => {
             </div>
             {/*Top Feature*/}
             <div className="flex flex-col">
-              <h3 class="font-raleway text-white font-semibold mb-6">
+              <h3 className="font-raleway text-white font-semibold mb-6">
                 Top Features
               </h3>
-              <ul class="space-y-4 flex flex-col font-inter font-normal text-sm leading-5 tracking-normal">
+              <ul className="space-y-4 flex flex-col font-inter font-normal text-sm leading-5 tracking-normal">
                 <li>
                   <a href="#" className="hover:text-white">
                     Ticketing System
@@ -108,10 +108,10 @@ const Footer = () => {
           <div className="flex gap-20">
             {/*Resources*/}
             <div className="flex flex-col">
-              <h3 class="font-raleway text-white font-semibold mb-6">
+              <h3 className="font-raleway text-white font-semibold mb-6">
                 Resources
               </h3>
-              <ul class="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
+              <ul className="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
                 <li>
                   <a href="#" className="hover:text-white">
                     Product Support
@@ -136,10 +136,10 @@ const Footer = () => {
             </div>
             {/*Company*/}
             <div className="flex flex-col">
-              <h3 class="font-raleway text-white font-semibold mb-6">
+              <h3 className="font-raleway text-white font-semibold mb-6">
                 Company
               </h3>
-              <ul class="space-y-4 flex flex-col font-inter font-normal text-sm leading-5 tracking-normal">
+              <ul className="space-y-4 flex flex-col font-inter font-normal text-sm leading-5 tracking-normal">
                 <li>
                   <a href="#" className="hover:text-white">
                     About us
@@ -168,10 +168,10 @@ const Footer = () => {
           {/*Favorite things*/}
           <div className="flex gap-20">
             <div className="flex flex-col">
-              <h3 class="font-raleway text-white font-semibold mb-6">
+              <h3 className="font-raleway text-white font-semibold mb-6">
                 Favourite Things
               </h3>
-              <ul class="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
+              <ul className="space-y-4 font-inter font-normal text-sm leading-5 tracking-normal flex flex-col">
                 <li>
                   <a href="#" className="hover:text-white">
                     For Enterprise
