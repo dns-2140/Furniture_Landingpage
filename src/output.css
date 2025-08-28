@@ -988,6 +988,16 @@
       row-gap: calc(var(--spacing) * 0);
     }
   }
+  .md\:gap-y-32 {
+    @media (width >= 48rem) {
+      row-gap: calc(var(--spacing) * 32);
+    }
+  }
+  .md\:gap-y-40 {
+    @media (width >= 48rem) {
+      row-gap: calc(var(--spacing) * 40);
+    }
+  }
   .md\:px-0 {
     @media (width >= 48rem) {
       padding-inline: calc(var(--spacing) * 0);
