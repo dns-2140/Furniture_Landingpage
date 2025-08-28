@@ -5,6 +5,7 @@ import NewInStore from "./components/NewInStore";
 import Best from "./components/Best";
 import Testimonial from "./components/Testimonial";
 import Form from "./components/Form";
+import Footer from "./components/Footer";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -128,6 +129,7 @@ function App() {
         <Best />
         <Testimonial />
         <Form />
+        <Footer />
       </div>
     </>
   );
