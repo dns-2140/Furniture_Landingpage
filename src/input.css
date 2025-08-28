@@ -155,4 +155,6 @@ li {
 
 .footer li a {
   width: 100%;
+  font-weight: 100;
+  font-size: 14px;
 }
