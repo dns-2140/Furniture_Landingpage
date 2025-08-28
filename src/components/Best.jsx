@@ -3,7 +3,7 @@ import React from "react";
 const Best = () => {
   return (
     <div className="px-6 mb-12 md:px-[100px]">
-      <div className="flex flex-col md:flex-row md:items-center">
+      <div className="flex flex-col md:flex-row md:items-center md:space-between">
         <div className="text-container-best flex flex-col gap-4 mb-12 md:max-w-[570px]">
           <h3 className="header-style">
             The Best Furniture Manufacturer of your choice

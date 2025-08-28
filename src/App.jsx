@@ -3,6 +3,7 @@ import "./output.css";
 import Features from "./components/Features";
 import NewInStore from "./components/NewInStore";
 import Best from "./components/Best";
+import Testimonial from "./components/Testimonial";
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -124,6 +125,7 @@ function App() {
         <Features />
         <NewInStore />
         <Best />
+        <Testimonial />
       </div>
     </>
   );
