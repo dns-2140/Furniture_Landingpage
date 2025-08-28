@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ArrowRight } from "lucide-react";
+import axios from "axios";
 
 const NewInStore = () => {
   const [images, setImages] = useState([
@@ -8,6 +9,32 @@ const NewInStore = () => {
     { id: 3, image_src: "/Cupboard.png", text: "Cupboard" },
     { id: 4, image_src: "/Chair.png", text: "Chair" },
   ]);
+
+  const [category, setCategory] = useState([]);
+
+  const API_BASE_URL =
+    "https://lumoshive-api-furniture.vercel.app/api/category";
+
+  async function fetchCategory() {
+    const url = API_BASE_URL;
+    const response = await axios(url);
+    return response.data;
+  }
+
+  useEffect(() => {
+    const getCategory = async () => {
+      try {
+        const categoryObj = await fetchCategory();
+        console.log(categoryObj.category);
+        setCategory(categoryObj.category);
+      } catch (error) {
+        console.error("Failed to fetch category obj:", error);
+      }
+    };
+
+    getCategory();
+  }, []);
+  console.log(category);
   return (
     <div className="mb-24 md:px-[100px]">
       <div className="flex flex-col px-6 md:px-0 md:flex-row md:items-center">
@@ -22,17 +49,18 @@ const NewInStore = () => {
           </div>
         </div>
         <div className="image-container flex no-wrap overflow-x-auto gap-4 scrollbar scrollbar-thumb-gray-300 scrollbar-track-gray-100">
-          {images.map((image, i) => (
+          {category.map((ct, i) => (
             <div
               className="relative max-w-[198px] max-h-[299px] md:max-w-[265px] md:max-h-[400px] flex-shrink-0"
-              key={image.id}
+              key={i}
             >
               <img
-                src={image.image_src}
+                src={ct.image}
+                alt={ct.title}
                 className="object-cover w-full h-full"
               />
               <p className="text-white absolute top-7/8 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px]">
-                {image.text}
+                {ct.title}
               </p>
             </div>
           ))}
