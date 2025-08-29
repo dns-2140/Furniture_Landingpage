@@ -2,7 +2,7 @@ import React from "react";
 
 const Best = () => {
   return (
-    <div className="px-6 mb-12 md:px-[100px]">
+    <section className="px-6 mb-12 md:px-[100px]">
       <div className="flex flex-col md:flex-row md:items-center md:space-between">
         <div className="text-container-best flex flex-col gap-4 mb-12 md:max-w-[570px]">
           <h3 className="header-style">
@@ -18,12 +18,14 @@ const Best = () => {
         <div className="image-container-best max-w-[340px] max-h-[244px] mx-auto md:max-w-[554px] md:max-h-[399px]">
           <img
             src="/Best.png"
-            alt=""
+            alt="Modern living room furniture from Furniture Power"
             className="object-contain w-full h-full"
+            loading="lazy"
+            title="Modern living room furniture from Furniture Power"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

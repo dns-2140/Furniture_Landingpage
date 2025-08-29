@@ -15,7 +15,6 @@ const ProductsContainer = () => {
   const [currPage, setCurrPage] = useState(1);
 
   function pagination(direction) {
-    console.log(direction);
     switch (direction) {
       case "previous":
         setCurrPage((prev) => prev - 1);
@@ -30,7 +29,6 @@ const ProductsContainer = () => {
     const getProducts = async () => {
       try {
         const { products } = await fetchProducts(currPage);
-        console.log(products);
         setProducts(products);
       } catch (error) {
         console.error("Failed to fetch products:", error);
