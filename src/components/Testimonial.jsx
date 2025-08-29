@@ -16,7 +16,6 @@ const Testimonial = () => {
   }
 
   function handlePagination(direction) {
-    console.log(direction);
     switch (direction) {
       case "previous":
         setCurrIndex((prev) => prev - 1);
@@ -40,9 +39,8 @@ const Testimonial = () => {
     getTestimonials();
   }, []);
 
-  console.log(testimonials);
   return (
-    <div className="px-6 mb-12 md:px-[100px] md:py-16 mt-12">
+    <section className="px-6 mb-12 md:px-[100px] md:py-16 mt-12">
       <div className="flex flex-col gap-8 md:flex-row md:items-center">
         <div className="text-container-testimonials flex flex-col gap-8 md:w-[635px]">
           <h3 className="header-style">What People Are Saying About Us</h3>
@@ -55,7 +53,16 @@ const Testimonial = () => {
                     ? testimonials[currIndex].image
                     : undefined
                 }
-                alt=""
+                alt={
+                  testimonials.length > 0
+                    ? `${testimonials[currIndex].name} profile picture`
+                    : "User avatar"
+                }
+                title={
+                  testimonials.length > 0
+                    ? `${testimonials[currIndex].name} profile picture`
+                    : "User avatar"
+                }
               />
             </div>
             <div className="user-name flex flex-col gap-2">
@@ -70,6 +77,7 @@ const Testimonial = () => {
           <p>{testimonials.length > 0 && testimonials[currIndex].message}</p>
           <div className="button-container md:flex mt-6 gap-5 justify-start hidden">
             <button
+              aria-label="Previous testimonial"
               disabled={currIndex === 0}
               onClick={() => handlePagination("previous")}
               className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] ${
@@ -81,6 +89,7 @@ const Testimonial = () => {
               <ArrowLeft />
             </button>
             <button
+              aria-label="Next testimonial"
               disabled={currIndex === testimonials.length - 1}
               onClick={() => handlePagination("next")}
               className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white ${
@@ -95,12 +104,15 @@ const Testimonial = () => {
         </div>
         <div className="image-container-best max-w-[340px] max-h-[205px] md:max-w-[562px] md:max-h-[340px] w-full h-full">
           <img
+            loading="lazy"
             src="/Testimonial-furniture.png"
-            alt=""
+            alt="Living room furniture setup with modern decor, used as a background for customer testimonials"
             className="object-contain w-full h-full"
+            title="Living room furniture setup with modern decor, used as a background for customer testimonials"
           />
           <div className="button-container flex mt-6 gap-5 justify-center md:hidden">
             <button
+              aria-label="Previous testimonial"
               disabled={currIndex === 0}
               className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)]  ${
                 currIndex === 0
@@ -112,6 +124,7 @@ const Testimonial = () => {
               <ArrowLeft />
             </button>
             <button
+              aria-label="Next testimonial"
               disabled={currIndex === testimonials.length - 1}
               className={`w-[36px] h-[36px] rounded-full flex items-center justify-center shadow-[0px_4px_10px_0px_rgba(15,27,51,0.05)] bg-brand text-white ${
                 currIndex === testimonials.length - 1
@@ -125,7 +138,7 @@ const Testimonial = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
