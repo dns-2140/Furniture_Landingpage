@@ -24,7 +24,7 @@ const Form = () => {
   }
 
   return (
-    <div
+    <section
       className="form h-[250px] md:h-[490px] w-full mt-24 flex flex-col justify-center items-center md:items-start md:pl-[760px]"
       id="form"
     >
@@ -34,13 +34,14 @@ const Form = () => {
         </h3>
         <p className="text-style text-white mb-8">Join our mailing list</p>
         <form onSubmit={handleSubmit} className="flex gap-6">
-          <label htmlFor="email " className="flex-1">
+          <label htmlFor="email" className="flex-1">
             <input
               type="email"
               name="email"
               placeholder="Your email address"
               className="bg-white md:max-w-[384px] md:w-full placeholder:font-saira placeholder:font-normal placeholder:text-xs placeholder:leading-none placeholder:tracking-normal py-4 px-5"
               value={email}
+              aria-label="Enter your email to join the mailing list"
               onChange={handleChange}
             />
           </label>
@@ -49,7 +50,7 @@ const Form = () => {
           </button>
         </form>
       </div>
-    </div>
+    </section>
   );
 };
 

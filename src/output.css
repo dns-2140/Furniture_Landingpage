@@ -311,17 +311,11 @@
   .hidden {
     display: none;
   }
-  .h-2\.5 {
-    height: calc(var(--spacing) * 2.5);
-  }
   .h-4 {
     height: calc(var(--spacing) * 4);
   }
   .h-10 {
     height: calc(var(--spacing) * 10);
-  }
-  .h-40 {
-    height: calc(var(--spacing) * 40);
   }
   .h-\[32px\] {
     height: 32px;
@@ -362,17 +356,11 @@
   .min-h-screen {
     min-height: 100vh;
   }
-  .w-2\.5 {
-    width: calc(var(--spacing) * 2.5);
-  }
   .w-4 {
     width: calc(var(--spacing) * 4);
   }
   .w-10 {
     width: calc(var(--spacing) * 10);
-  }
-  .w-40 {
-    width: calc(var(--spacing) * 40);
   }
   .w-\[32px\] {
     width: 32px;
@@ -420,6 +408,9 @@
   }
   .cursor-not-allowed {
     cursor: not-allowed;
+  }
+  .cursor-pointer {
+    cursor: pointer;
   }
   .grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1009,11 +1000,6 @@
   .md\:gap-y-32 {
     @media (width >= 48rem) {
       row-gap: calc(var(--spacing) * 32);
-    }
-  }
-  .md\:gap-y-40 {
-    @media (width >= 48rem) {
-      row-gap: calc(var(--spacing) * 40);
     }
   }
   .md\:px-0 {

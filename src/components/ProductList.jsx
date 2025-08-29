@@ -13,7 +13,7 @@ const ProductList = ({ products, pagination, currPage }) => (
       best products with number 1 quality in the world
     </p>
 
-    <div className="flex flex-wrap gap-5 gap-y-20 md:gap-y-32">
+    <div className="flex flex-wrap gap-5 gap-y-20 md:gap-y-32 justify-center md:justify-start">
       {products.map((product) => (
         <div
           key={product.id}
