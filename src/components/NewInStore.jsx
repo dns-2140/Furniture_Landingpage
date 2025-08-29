@@ -25,7 +25,6 @@ const NewInStore = () => {
     const getCategory = async () => {
       try {
         const categoryObj = await fetchCategory();
-        console.log(categoryObj.category);
         setCategory(categoryObj.category);
       } catch (error) {
         console.error("Failed to fetch category obj:", error);
@@ -34,9 +33,12 @@ const NewInStore = () => {
 
     getCategory();
   }, []);
-  console.log(category);
   return (
-    <div className="mb-24 md:px-[100px]">
+    <section
+      className="mb-24 md:px-[100px]"
+      aria-labelledby="new-store-heading"
+      id="new-store-heading"
+    >
       <div className="flex flex-col px-6 md:px-0 md:flex-row md:items-center">
         <div className="text-container flex md:flex-col md:justify-start md:items-start md:max-w-[240px] md:mr-[72px] gap-5 justify-between items-center mb-6">
           <h3 className="header-style">New In The Store</h3>
@@ -58,6 +60,8 @@ const NewInStore = () => {
                 src={ct.image}
                 alt={ct.title}
                 className="object-cover w-full h-full"
+                loading="lazy"
+                title={ct.title}
               />
               <p className="text-white absolute top-7/8 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[18px]">
                 {ct.title}
@@ -66,7 +70,7 @@ const NewInStore = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

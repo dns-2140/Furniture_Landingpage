@@ -31,7 +31,6 @@ const Hero = () => {
     const getHeader = async () => {
       try {
         const headerObj = await fetchHeader();
-        console.log(headerObj);
         setHeader(headerObj);
       } catch (error) {
         console.error("Failed to fetch header obj:", error);
