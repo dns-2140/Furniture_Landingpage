@@ -3,7 +3,7 @@ import axios from "axios";
 
 const Hero = () => {
   const [header, setHeader] = useState({});
-  const [data, setData] = useState([]);
+  const [data, setData] = useState({});
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   function handleClick() {
@@ -15,13 +15,13 @@ const Hero = () => {
   const API_BASE_URL_DATA =
     "https://lumoshive-api-furniture.vercel.app/api/data";
 
-  async function fetchHeader(page) {
+  async function fetchHeader() {
     const url = API_BASE_URL_HEADER;
     const response = await axios(url);
     return response.data;
   }
 
-  async function fetchData(page) {
+  async function fetchData() {
     const url = API_BASE_URL_DATA;
     const response = await axios(url);
     return response.data;
@@ -56,6 +56,7 @@ const Hero = () => {
   const { experience, country, sold, variant } = data;
   return (
     <section
+      aria-labelledby="hero-heading"
       id="hero"
       className={`md:h-[1000px]  h-[750px]`}
       style={{
@@ -63,21 +64,27 @@ const Hero = () => {
       }}
     >
       <div className="container mx-auto px-6 py-12 md:px-24">
-        <nav className="flex items-center justify-between text-white">
-          <img src="./FurniShop.svg" alt="" />
+        <nav
+          className="flex items-center justify-between text-white"
+          aria-label="Main Navigation"
+        >
+          <a href="#hero">
+            <img src="./FurniShop.svg" alt="FurniShop logo" />
+          </a>
+
           {/* DESKTOP MENU */}
           <ul className="desktop-menu hidden md:flex md:gap-16 text-sm font-thin ">
             <li>
-              <a href="#">Home</a>
+              <a href="#hero">Home</a>
             </li>
             <li>
-              <a href="#">About</a>
+              <a href="#hero">About</a>
             </li>
             <li>
-              <a href="#">Features</a>
+              <a href="#features">Features</a>
             </li>
             <li>
-              <a href="#">Contact</a>
+              <a href="#form">Contact</a>
             </li>
           </ul>
 
@@ -86,6 +93,9 @@ const Hero = () => {
               onClick={handleClick}
               id="menu-btn"
               type="button"
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="menu"
+              aria-label="Toggle navigation menu"
               className={`${
                 isMobileMenuOpen ? "open z-51" : ""
               } block hamburger md:hidden focus:outline-none `}
@@ -102,20 +112,17 @@ const Hero = () => {
               isMobileMenuOpen ? "flex" : "hidden"
             } flex-col self-end  w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black z-50`}
           >
-            <a href="#" className="hover:text-pink-500">
+            <a href="#hero" className="hover:text-pink-500">
+              Home
+            </a>
+            <a href="#hero" className="hover:text-pink-500">
               About
             </a>
-            <a href="#" className="hover:text-pink-500">
-              Careers
+            <a href="#features" className="hover:text-pink-500">
+              Features
             </a>
-            <a href="#" className="hover:text-pink-500">
-              Events
-            </a>
-            <a href="#" className="hover:text-pink-500">
-              Products
-            </a>
-            <a href="#" className="hover:text-pink-500">
-              Supports
+            <a href="#form" className="hover:text-pink-500">
+              Contact
             </a>
           </div>
         </nav>

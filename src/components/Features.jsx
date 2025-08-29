@@ -2,7 +2,10 @@ import React from "react";
 
 const Features = () => {
   return (
-    <div className="mt-[210px] px-6 mx-auto md:px-[100px] mb-[107px] md:mb-[140px]">
+    <div
+      className="mt-[210px] px-6 mx-auto md:px-[100px] mb-[107px] md:mb-[140px]"
+      id="features"
+    >
       <div className="flex flex-col gap-[50px] md:flex-row-reverse justify-center items-center">
         <div>
           <h3 className="header-style mb-4 md:w-[508px]">

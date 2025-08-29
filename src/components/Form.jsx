@@ -24,7 +24,10 @@ const Form = () => {
   }
 
   return (
-    <div className="form h-[250px] md:h-[490px] w-full mt-24 flex flex-col justify-center items-center md:items-start md:pl-[760px]">
+    <div
+      className="form h-[250px] md:h-[490px] w-full mt-24 flex flex-col justify-center items-center md:items-start md:pl-[760px]"
+      id="form"
+    >
       <div className="flex flex-col items-center md:items-start md:max-w-[500px] md:w-full">
         <h3 className="header-style text-white mb-5 max-w-[300px] md:max-w-[349px] text-center md:text-left">
           Get more discount Off your order
