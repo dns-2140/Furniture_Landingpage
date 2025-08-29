@@ -7,6 +7,8 @@ import Form from "./components/Form";
 import Footer from "./components/Footer";
 import ProductsContainer from "./components/ProductsContainer";
 import Hero from "./components/Hero";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
         <Testimonial />
         <Form />
         <Footer />
+        <ToastContainer position="top-right" autoClose={3000} />
       </div>
     </>
   );
