@@ -5,6 +5,7 @@ const Features = () => {
     <div
       className="mt-[210px] px-6 mx-auto md:px-[100px] mb-[107px] md:mb-[140px]"
       id="features"
+      aria-labelledby="features-heading"
     >
       <div className="flex flex-col gap-[50px] md:flex-row-reverse justify-center items-center">
         <div>
@@ -18,7 +19,7 @@ const Features = () => {
 
           <div className="flex flex-col gap-6">
             <div className="flex items-start gap-4">
-              <img src="/checklist.png" alt="" />
+              <img src="/checklist.png" alt="Checklist icon" />
 
               <div className="feature-text mt-[-4px]">
                 <h4 className="subheader-style">Valuation Services</h4>
@@ -30,7 +31,7 @@ const Features = () => {
             </div>
 
             <div className="flex items-start gap-4 md:gap-6">
-              <img src="/checklist.png" alt="" className="" />
+              <img src="/checklist.png" alt="Checklist icon" className="" />
 
               <div className="feature-text mt-[-4px]">
                 <h4 className="subheader-style">
@@ -45,10 +46,22 @@ const Features = () => {
           </div>
         </div>
         <div className="max-w-[340px] max-h-[270px] mx-auto md:hidden">
-          <img src="/features.png" alt="" className="object-cover" />
+          <img
+            src="/features.png"
+            alt="Modern furniture arrangement"
+            className="object-cover"
+            title="Modern furniture arrangement"
+            loading="lazy"
+          />
         </div>
         <div className="max-w-[554px] max-h-[443px] mx-auto hidden md:block">
-          <img src="/Features-desktop.png" alt="" className="object-cover" />
+          <img
+            src="/Features-desktop.png"
+            alt="Modern furniture arrangement"
+            className="object-cover"
+            title="Modern furniture arrangement"
+            loading="lazy"
+          />
         </div>
       </div>
     </div>

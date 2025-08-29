@@ -135,7 +135,9 @@ const Hero = () => {
             Buying the best furniture can not be easier. Pick the furniture and
             we will help design your room.
           </p>
-          <button className="cta-button px-12 py-2">Shop now</button>
+          <button className="cta-button px-12 py-2 cursor-pointer">
+            Shop now
+          </button>
         </div>
 
         <div className="stats-banner grid grid-cols-2 md:grid-cols-4 bg-[#286f6c] text-white w-full rounded-lg py-10  md:py-4 gap-y-16 md:gap-y-0 md:mt-0 mt-40">
